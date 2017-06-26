@@ -21,7 +21,7 @@ All of other exercises are available through:
 [Exercises subdomain](http://exos.davidrei.fr/)
 
 ## License
-All of my work is and will always be licensed under Creative Commons Attribution-ShareAlike 4.0 International
+All of my personal work is and will always be licensed under Creative Commons Attribution-ShareAlike 4.0 International
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Contact
