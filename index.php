@@ -23,6 +23,9 @@
                 <li>
                     <a href="exos.php?exo=3">Chap 2 : Gestion des attributs</a>
                 </li>
+                <li>
+                    <a href="exos.php?exo=4">Chap 2 : Gestion des classes</a>
+                </li>
             </ul>
         </div>
     </body>

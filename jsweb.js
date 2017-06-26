@@ -72,7 +72,27 @@ function exoChap2_2(){
     console.log(infosLiens()[2]);
 }
 
+function possede(id, classe){
+    if(document.getElementById(id)){
+        var element = document.getElementById(id);
+        if(element.classList.contains(classe)){
+            console.log('true');
+        }
+        else{
+            console.log('false');
+        }
+    }
+    else{
+        console.log('Aucun élément ne possède l\'identifiant '+ id);
+    }
+}
 
+function exoChap2_3(){
+    possede("saxophone", "bois"); // Doit afficher true
+    possede("saxophone", "cuivre"); // Doit afficher false
+    possede("trompette", "cuivre"); // Doit afficher true
+    possede("contrebasse", "cordes"); // Doit afficher une erreur
+}
 
 
 
@@ -88,6 +108,9 @@ function dispatcher(exoNb){
             break;
         case '3':
             exoChap2_2();
+            break;
+        case '4':
+            exoChap2_3();
             break;
     }
 }
