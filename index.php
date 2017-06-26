@@ -15,10 +15,13 @@
             <h2>Accès aux divers exercices et activités</h2>
             <ul>
                 <li>
-                    <a href="child.php">Affichage d'un noeud enfant</a>
+                    <a href="exos.php?exo=1">Chap 1 : Affichage d'un noeud enfant</a>
                 </li>
                 <li>
-
+                    <a href="exos.php?exo=2">Chap 2 : Comptage d'éléments</a>
+                </li>
+                <li>
+                    <a href="exos.php?exo=3">Chap 2 : Gestion des attributs</a>
                 </li>
             </ul>
         </div>
