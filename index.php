@@ -26,6 +26,12 @@
                 <li>
                     <a href="exos.php?exo=4">Chap 2 : Gestion des classes</a>
                 </li>
+                <li>
+                    <a href="exos.php?exo=5">Chap 3 : Liste de journaux</a>
+                </li>
+                <li>
+                    <a href="exos.php?exo=6">Chap 3 : Mini-dictionnaire</a>
+                </li>
             </ul>
         </div>
     </body>

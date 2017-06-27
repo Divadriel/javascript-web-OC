@@ -65,6 +65,26 @@ switch ($exo) {
             </ul>
         <?php
         break;
+    case '5':
+        ?>
+            <title>Quelques journaux en ligne</title>
+        </head>
+
+        <body>
+            <h1>Quelques journaux en ligne</h1>
+            <div id="contenu"></div>
+        <?php
+        break;
+    case '6':
+        ?>
+                <title>Mini-dictionnaire</title>
+        </head>
+
+        <body>
+            <h1>Un mini-dictionnaire</h1>
+            <div id="contenu"></div>
+        <?php
+        break;
 }
 ?>
         <script src="jsweb.js"></script>

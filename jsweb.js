@@ -94,7 +94,52 @@ function exoChap2_3(){
     possede("contrebasse", "cordes"); // Doit afficher une erreur
 }
 
+function exoChap3_1(){
+    var journaux = ["http://lemonde.fr", "http://lefigaro.fr", "http://liberation.fr"];
+    var EltDiv = document.getElementById('contenu');
+    journaux.forEach(function(currentVal, index){
+        var link = document.createElement("a");
+        link.textContent = currentVal;
+        link.href = currentVal;
+        EltDiv.appendChild(link);
+        EltDiv.appendChild(document.createElement("br"));
+    });
+}
 
+function exoChap3_2(){
+    // Liste des mots du dictionnaire
+    var mots = [
+        {
+            terme: "Procrastination",
+            definition: "Tendance pathologique à remettre systématiquement au lendemain"
+        },
+        {
+            terme: "Tautologie",
+            definition: "Phrase dont la formulation ne peut être que vraie"
+        },
+        {
+            terme: "Oxymore",
+            definition: "Figure de style qui réunit dans un même syntagme deux termes sémantiquement opposés"
+        }
+    ];
+
+// TODO : créer le dictionnaire sur la page web, dans la div "contenu"
+    var contenu = document.getElementById('contenu');
+    var EltDL = document.createElement('dl');
+    mots.forEach(function(currentVal, index){
+        var strong = document.createElement('strong');
+        strong.textContent = currentVal['terme'];
+        var dt = document.createElement('dt');
+        dt.appendChild(strong);
+        var dd = document.createElement('dd');
+        dd.textContent = currentVal['definition'];
+
+        EltDL.appendChild(dt);
+        EltDL.appendChild(dd);
+    });
+    contenu.appendChild(EltDL);
+
+}
 
 
 
@@ -111,6 +156,12 @@ function dispatcher(exoNb){
             break;
         case '4':
             exoChap2_3();
+            break;
+        case '5':
+            exoChap3_1();
+            break;
+        case '6':
+            exoChap3_2();
             break;
     }
 }
