@@ -10,7 +10,7 @@ else{
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 <?php
 
 switch ($exo) {
@@ -83,6 +83,48 @@ switch ($exo) {
         <body>
             <h1>Un mini-dictionnaire</h1>
             <div id="contenu"></div>
+        <?php
+        break;
+    case '7':
+        ?>
+                <title>Couleurs</title>
+        </head>
+
+        <body>
+            <h1>Paragraphe 1</h1>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim fringilla dapibus. Curabitur placerat efficitur molestie. Quisque quis consequat nibh. Aenean feugiat, eros eget aliquam vulputate, leo augue luctus lectus, non lobortis libero quam non sem. Aliquam sit amet tincidunt ex, mollis interdum massa. Sed vulputate mi id accumsan scelerisque. Nam interdum iaculis ipsum, non convallis mauris faucibus et. Pellentesque in imperdiet lorem, in condimentum neque. Nullam auctor sem eu sapien pulvinar, non ultricies ipsum hendrerit. Aliquam at magna convallis, ultrices enim vitae, mollis lacus.</div>
+
+            <h1>Paragraphe 2</h1>
+            <div>Vivamus at justo blandit, ornare leo id, vehicula urna. Fusce sed felis eget magna viverra feugiat eget nec orci. Duis non massa nibh. Aenean vehicula velit a magna lobortis tempor ut quis felis. Proin vitae dui a eros facilisis fringilla ut ut ante. Curabitur eu magna dui. Ut hendrerit suscipit metus, id vehicula velit. Pellentesque ac nisl rutrum, efficitur velit dictum, cursus odio.</div>
+
+            <h1>Paragraphe 3</h1>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet pharetra massa. Nulla blandit erat nulla, et scelerisque libero varius ut. Praesent bibendum eu magna ullamcorper venenatis. Sed ut pellentesque leo. Sed ultrices sapien consequat odio posuere gravida. Nunc lorem tortor, volutpat nec maximus in, suscipit a ex. Praesent efficitur ex ut viverra placerat. Vivamus eu sapien sed enim vehicula sodales.</div>
+
+    <?php
+        break;
+    case '8':
+        ?>
+            <link rel="stylesheet" href="styleChap4-2.css" />
+            <title>Informations</title>
+        </head>
+
+        <body>
+            <div id="contenu">ABC
+                <br />Easy as
+                <br />One, two, three
+            </div>
+            <div id="infos"></div>
+        <?php
+        break;
+    default:
+        ?>
+            <title>Erreur : page vide</title>
+        </head>
+        <body>
+            <h1>Erreur : mauvaise requête</h1>
+            <p>
+                Il semblerait que vous vous soyez trompés de liens. <a href="index.php" target="_self">Retour à la page d'accueil</a>.
+            </p>
         <?php
         break;
 }

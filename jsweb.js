@@ -141,6 +141,30 @@ function exoChap3_2(){
 
 }
 
+function rgb(r, g, b){
+    return "rgb("+r+", "+g+", "+b+")";
+}
+
+function exoChap4_1(){
+    var chosenTextColour = prompt(String("Veuillez entrer une nouvelle couleur de texte (nom anglais ou au format RGB : rgb(0, 0, 0) pour du noir) :"));
+    var chosenBgColour = prompt(String("Veuillez entrer une nouvelle couleur de fond (nom anglais ou au format RGB : rgb(0, 0, 0) pour du noir) :"));
+    var divElts = document.querySelectorAll('div');
+    divElts.forEach(function(currentVal){
+        currentVal.style.color = chosenTextColour;
+        currentVal.style.backgroundColor = chosenBgColour;
+    });
+}
+
+function exoChap4_2(){
+    var stylePara = getComputedStyle(document.getElementById('contenu'));
+    var divSuppl = document.createElement('div');
+    divSuppl.innerHTML = "<p>Informations sur l'élément<br />";
+    divSuppl.innerHTML += "<ul><li>Hauteur : "+stylePara.height+"</li>";
+    divSuppl.innerHTML += "<li>Longueur : "+stylePara.width+"</li></ul></p>";
+
+    document.getElementById('contenu').insertAdjacentHTML("beforeBegin", divSuppl.innerHTML);
+}
+
 
 
 function dispatcher(exoNb){
@@ -162,6 +186,12 @@ function dispatcher(exoNb){
             break;
         case '6':
             exoChap3_2();
+            break;
+        case '7':
+            exoChap4_1();
+            break;
+        case '8':
+            exoChap4_2();
             break;
     }
 }
