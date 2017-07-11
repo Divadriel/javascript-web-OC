@@ -165,6 +165,113 @@ function exoChap4_2(){
     document.getElementById('contenu').insertAdjacentHTML("beforeBegin", divSuppl.innerHTML);
 }
 
+function exoChap5_1(){
+    var clickedButton = document.getElementById('clic');
+    var stopButton = document.getElementById('desactiver');
+    var displayClicks = document.getElementById('compteurClics');
+    var clickNb = 0;
+    clickedButton.addEventListener('click', function(event){
+        clickNb++;
+        displayClicks.textContent = clickNb;
+    });
+    stopButton.addEventListener('click', function(event){
+        clickNb = 0;
+        clickedButton.setAttribute('disabled', 'true');
+    });
+}
+
+function exoChap5_2(){
+    var divs = document.querySelectorAll('div');
+    document.addEventListener('keydown', function(event){
+        divs.forEach(function(currentVal){
+            switch (event.keyCode) {
+                case 82:
+                    currentVal.style.backgroundColor = 'red';
+                    break;
+                case 74:
+                    currentVal.style.backgroundColor = 'yellow';
+                    break;
+                case 86:
+                    currentVal.style.backgroundColor = 'green';
+                    break;
+                case 66:
+                    currentVal.style.backgroundColor = 'white';
+                    break;
+                default:
+                    currentVal.style.backgroundColor = 'blue';
+                    break;
+            }
+        });
+    });
+}
+
+function exoChap5_3(){
+    var addButton = document.getElementsByTagName('button')[0];
+    var dessertList = document.getElementById('desserts');
+
+    function setDessertToLi(li){
+        var dessert = prompt(String("Quel est le nouveau dessert ?"));
+        li.textContent = dessert;
+    }
+    addButton.addEventListener('click', function(event){
+        var newLi = document.createElement('li');
+        setDessertToLi(newLi);
+
+        newLi.addEventListener('click', function(event){
+            setDessertToLi(newLi);
+        });
+        dessertList.appendChild(newLi);
+    });
+}
+
+function exoChap5_4(){
+    // Liste des questions à afficher. Une question est définie par son énoncé et sa réponse
+    var questions = [
+        {
+            enonce: "Combien font 2+2 ?",
+            reponse: "2+2 = 4"
+        },
+        {
+            enonce: "En quelle année Christophe Colomb a-t-il découvert l'Amérique ?",
+            reponse: "1492"
+        },
+        {
+            enonce: "On me trouve 2 fois dans l'année, 1 fois dans la semaine, mais pas du tout dans le jour... Qui suis-je ?",
+            reponse: "La lettre N"
+        }
+    ];
+    questions.forEach(function(currentVal, index){
+        var contenu = document.getElementById('contenu');
+        var para = document.createElement('p');
+        var strong = document.createElement('strong');
+        var spanItalic = document.createElement('span');
+        var br1 = document.createElement('br');
+        var br2 = document.createElement('br');
+        var spanAnswer = document.createElement('span');
+        var button = document.createElement('button');
+
+        strong.textContent = 'Question ' + String(index+1) + ' : ';
+        spanItalic.textContent = currentVal['enonce'];
+        spanItalic.style.fontStyle = 'italic';
+        spanAnswer.textContent = currentVal['reponse'];
+        spanAnswer.style.display = 'none';
+        button.textContent = 'Afficher la réponse !';
+
+        para.appendChild(strong);
+        para.appendChild(spanItalic);
+        para.appendChild(br1);
+        para.appendChild(spanAnswer);
+        para.appendChild(br2);
+        para.appendChild(button);
+        contenu.appendChild(para);
+
+        button.addEventListener('click', function(event){
+            spanAnswer.style.display = 'block';
+        });
+    });
+}
+
+
 
 
 function dispatcher(exoNb){
@@ -192,6 +299,18 @@ function dispatcher(exoNb){
             break;
         case '8':
             exoChap4_2();
+            break;
+        case '9':
+            exoChap5_1();
+            break;
+        case '10':
+            exoChap5_2();
+            break;
+        case '11':
+            exoChap5_3();
+            break;
+        case '12':
+            exoChap5_4();
             break;
     }
 }

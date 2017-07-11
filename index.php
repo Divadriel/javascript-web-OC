@@ -15,29 +15,67 @@
             <h2>Accès aux divers exercices et activités</h2>
             <ul> <h3>Exercices :</h3>
                 <li>
-                    <a href="exos.php?exo=1">Chap 1 : Affichage d'un noeud enfant</a>
+                    <h4>Chapitre 1 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=1">Affichage d'un noeud enfant</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="exos.php?exo=2">Chap 2 : Comptage d'éléments</a>
+                    <h4>Chapitre 2 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=2">Comptage d'éléments</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=3">Gestion des attributs</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=4">Gestion des classes</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="exos.php?exo=3">Chap 2 : Gestion des attributs</a>
+                    <h4>Chapitre 3 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=5">Liste de journaux</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=6">Mini-dictionnaire</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="exos.php?exo=4">Chap 2 : Gestion des classes</a>
+                    <h4>Chapitre 4 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=7">Modif des couleurs</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=8">Infos sur un élément</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="exos.php?exo=5">Chap 3 : Liste de journaux</a>
+                    <h4>Chapitre 5 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=9">Compteur de clics</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=10">Changement de couleur</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=11">Liste de desserts</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=12">Quiz interactif</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="exos.php?exo=6">Chap 3 : Mini-dictionnaire</a>
-                </li>
-                <li>
-                    <a href="exos.php?exo=7">Chap 4 : Modif des couleurs</a>
-                </li>
-                <li>
-                    <a href="exos.php?exo=8">Chap 4 : Infos sur un élément</a>
-                </li>
+
             </ul>
             <ul> <h3>Activités :</h3>
                 <li>
