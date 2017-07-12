@@ -271,6 +271,34 @@ function exoChap5_4(){
     });
 }
 
+function exoChap6_1(){
+    var form = document.querySelector("form");
+    form.addEventListener("submit", function(event){
+        var infoMdp = document.getElementById('infoMdp');
+        var regex = /.*[0-9]+.*/g;
+        var mdp1 = form.elements.mdp1.value;
+        var mdp2 = form.elements.mdp2.value;
+
+        event.preventDefault();
+
+        if (mdp1 === mdp2) {
+            if (mdp1.length >= 6) {
+                if (!(regex.test(mdp1))){
+                    infoMdp.textContent = 'Erreur : le mot de passe ne contient pas de chiffre';
+                }
+                else {
+                    infoMdp.textContent = 'Mots de passe OK';
+                }
+            }
+            else {
+                infoMdp.textContent = 'Erreur : la longueur minimale du mot de passe est de 6 caractères';
+            }
+        }
+        else {
+            infoMdp.textContent = 'Erreur : les mots de passe ne sont pas identiques';
+        }
+    });
+}
 
 
 
@@ -311,6 +339,15 @@ function dispatcher(exoNb){
             break;
         case '12':
             exoChap5_4();
+            break;
+        case '13':
+            exoChap6_1();
+            break;
+        case '14':
+            exoChap6_2();
+            break;
+        case '15':
+            exoChap6_3();
             break;
     }
 }

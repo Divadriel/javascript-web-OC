@@ -75,7 +75,20 @@
                         </li>
                     </ul>
                 </li>
-
+                <li>
+                    <h4>Chapitre 6 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=13">Vérificateur de mot de passe</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=14">Liste de personnages</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=15">Autocomplétion</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <ul> <h3>Activités :</h3>
                 <li>
