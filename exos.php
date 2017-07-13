@@ -191,6 +191,22 @@ switch ($exo) {
         break;
     case '14':
         ?>
+            <!--link rel="stylesheet" href="../css/personnages.css"-->
+            <title>Maisons et personnages</title>
+        </head>
+
+        <body>
+            <h1>Quelques personnages de Game of Thrones</h1>
+            <form>
+                <label for="maison">Maison</label> :
+                <select name="maison" id="maison">
+                    <option value="" selected>Choisissez une maison</option>
+                </select>
+            </form>
+
+            <p>
+                <ul id="persos"></ul>
+            </p>
         <?php
         break;
     case '15':

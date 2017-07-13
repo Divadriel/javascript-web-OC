@@ -300,6 +300,67 @@ function exoChap6_1(){
     });
 }
 
+function exoChap6_2(){
+    // Liste de quelques maisons de Game of Thrones. Chaque maison a un code et un nom
+    var maisons = [
+        {
+            code: "ST",
+            nom: "Stark"
+        },
+        {
+            code: "LA",
+            nom: "Lannister"
+        },
+        {
+            code: "BA",
+            nom: "Baratheon"
+        },
+        {
+            code: "TA",
+            nom: "Targaryen"
+        }
+    ];
+
+    // Renvoie un tableau contenant quelques personnages d'une maison
+    function getPersonnages(codeMaison) {
+        switch (codeMaison) {
+            case "ST":
+                return ["Eddard", "Catelyn", "Robb", "Sansa", "Arya", "Jon Snow"];
+            case "LA":
+                return ["Tywin", "Cersei", "Jaime", "Tyrion"];
+            case "BA":
+                return ["Robert", "Stannis", "Renly"];
+            case "TA":
+                return ["Aerys", "Daenerys", "Viserys"];
+            default:
+                return [];
+        }
+    }
+    // création de la liste au chargement de la page
+    // creating the houses list when the page loads
+    var maisonList = document.getElementById('maison');
+    var persosList = document.getElementById('persos');
+    maisons.forEach(function(currentVal, index){
+        var option = document.createElement('option');
+        option.value = currentVal['code'];
+        option.textContent = currentVal['nom'];
+        maisonList.appendChild(option);
+    });
+
+    // on récupère les persos, on remet à zéro la liste, puis on la remplit
+    // getting the characters, then resetting the list, and filling it again
+    maisonList.addEventListener('change', function(event){
+        var persos = getPersonnages(event.target.value);
+        persosList.innerHTML = '';
+        persos.forEach(function(currentVal){
+            var li = document.createElement('li');
+            li.textContent = currentVal;
+            persosList.appendChild(li);
+        });
+    });
+
+}
+
 
 
 function dispatcher(exoNb){
