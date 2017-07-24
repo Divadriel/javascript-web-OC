@@ -11,6 +11,7 @@ else{
 
 <head>
     <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
 <?php
 
 switch ($exo) {
@@ -104,7 +105,6 @@ switch ($exo) {
         break;
     case '8':
         ?>
-            <link rel="stylesheet" href="styleChap4-2.css" />
             <title>Informations</title>
         </head>
 
@@ -211,6 +211,36 @@ switch ($exo) {
         break;
     case '15':
         ?>
+        <?php
+        break;
+    case '16':
+        ?>
+            <title>Chronomètre</title>
+        </head>
+        <body>
+            <form>
+                <button type="button" name="start" id="actionButton">Démarrer</button>
+            </form>
+            <p>
+                <span id="chrono">0</span> seconde(s) écoulée(s)
+            </p>
+
+        <?php
+        break;
+    case '17':
+        ?>
+            <title>Ballon rebondissant</title>
+        </head>
+
+        <body>
+            <p>
+                <button id="demarrer">Démarrer</button>
+                <button id="arreter" disabled>Arrêter</button>
+            </p>
+
+            <div id="cadre">
+                <img id="ballon" src="img/basketball.jpg">
+            </div>
         <?php
         break;
     default:

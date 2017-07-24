@@ -347,8 +347,6 @@ function exoChap6_2(){
         maisonList.appendChild(option);
     });
 
-    // on récupère les persos, on remet à zéro la liste, puis on la remplit
-    // getting the characters, then resetting the list, and filling it again
     maisonList.addEventListener('change', function(event){
         var persos = getPersonnages(event.target.value);
         persosList.innerHTML = '';
@@ -359,6 +357,71 @@ function exoChap6_2(){
         });
     });
 
+}
+
+function exoChap7_1(){
+    var button = document.getElementById('actionButton');
+    var chronoID = null;
+
+    function addSec(){
+        var chrono = document.getElementById('chrono');
+        chrono.textContent = Number(chrono.textContent) + 1;
+    }
+
+    button.addEventListener('click', function(event){
+        if(button.textContent === 'Démarrer'){
+            button.textContent = 'Arrêter';
+            chronoID = setInterval(addSec, 1000);
+        }
+        else {
+            button.textContent = 'Démarrer';
+            clearInterval(chronoID);
+        }
+    });
+}
+
+function exoChap7_2(){
+    var cadre = document.getElementById('cadre');
+    var ballon = document.getElementById('ballon');
+    var ballonWidth = parseFloat(getComputedStyle(ballon).width);
+    var animationID = null;
+    var speed = 5;
+    var sens = 1;
+    var startButton = document.getElementById('demarrer');
+    var stopButton = document.getElementById('arreter');
+    var xMax = parseFloat(getComputedStyle(cadre).width);
+
+    function moveBallon(){
+        var xBallon = parseFloat(getComputedStyle(ballon).left);
+
+        if(xBallon + ballonWidth <= xMax){
+            sens = 1;
+        }
+        else {
+            sens = -1;
+
+            if(xMax > 0){
+                xMax = xMax * sens;
+            }
+            if(xBallon <= 0){
+                sens = 1;
+                xMax = Math.abs(xMax);
+            }
+        }
+        ballon.style.left = String((xBallon + (speed * sens))) + "px";
+        //console.log("sens : " + String(sens) + " left : " + String(ballon.style.left));
+        animationID = requestAnimationFrame(moveBallon);
+    }
+    startButton.addEventListener('click', function(event){
+        animationID = requestAnimationFrame(moveBallon);
+        startButton.setAttribute('disabled', 'disabled');
+        stopButton.removeAttribute('disabled');
+    });
+    stopButton.addEventListener('click', function(event){
+        cancelAnimationFrame(animationID);
+        startButton.removeAttribute('disabled');
+        stopButton.setAttribute('disabled', 'disabled');
+    });
 }
 
 
@@ -409,6 +472,12 @@ function dispatcher(exoNb){
             break;
         case '15':
             exoChap6_3();
+            break;
+        case '16':
+            exoChap7_1();
+            break;
+        case '17':
+            exoChap7_2();
             break;
     }
 }

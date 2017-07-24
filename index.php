@@ -89,6 +89,17 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <h4>Chapitre 7 :</h4>
+                    <ul>
+                        <li>
+                            <a href="exos.php?exo=16">Chronomètre</a>
+                        </li>
+                        <li>
+                            <a href="exos.php?exo=17">Ballon rebondissant</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <ul> <h3>Activités :</h3>
                 <li>
