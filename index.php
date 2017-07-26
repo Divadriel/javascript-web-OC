@@ -105,6 +105,9 @@
                 <li>
                     <a href="activite_1/html/index.php">Activité 1 : Site de partage de liens</a>
                 </li>
+                <li>
+                    <a href="activite_2/html/index.php">Activité 2 : Gérer l'ajout de nouveaux liens</a>
+                </li>
             </ul>
         </div>
     </body>
