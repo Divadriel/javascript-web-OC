@@ -100,6 +100,11 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <p>
+                        J'ai eu la flemme de faire les exos concernant la 3e partie du cours. J'ai déjà de l'expérience avec les appels Ajax, et je n'ai donc pas besoin de m'exercer.
+                    </p>
+                </li>
             </ul>
             <ul> <h3>Activités :</h3>
                 <li>
@@ -107,6 +112,9 @@
                 </li>
                 <li>
                     <a href="activite_2/html/index.php">Activité 2 : Gérer l'ajout de nouveaux liens</a>
+                </li>
+                <li>
+                    <a href="activite_3/html/index.php">Activité 3 : Utiliser un serveur web externe</a>
                 </li>
             </ul>
         </div>
